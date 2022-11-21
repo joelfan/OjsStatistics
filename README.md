@@ -3,7 +3,7 @@ Collection of program to produce statistics on OJS
 
 This project is a collection of programs that collect and then visualize statistics from PKP OJS (https://github.com/pkp/ojs).
 It is composed of two main part: 
-1) the first part collect the data and prepares the data files. This part runs asynch, that means it is deferred periodically. We make it run, for example, once in a month.
+1) the first part collects the data and prepares the data files. This part runs asynch, that means it is deferred periodically. We make it run, for example, once in a month.
 2) the second part visualizes the data
 
 **Part 1** is done with php programs. The aim of those PHP programs is to collect the relevant data. 
