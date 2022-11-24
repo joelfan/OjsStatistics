@@ -1,7 +1,7 @@
 # OjsStatistics
 Collection of programs to produce statistics on OJS
 
-##Introduction
+## Introduction
 This project is a collection of programs that collect and then visualize statistics from PKP OJS (https://github.com/pkp/ojs).
 It is composed of two main parts: 
 1) the first part collects the data and prepares the data files. This part runs asynch, that means it is deferred periodically. We make it run, for example, once in a month.
@@ -18,8 +18,9 @@ The PHP programs get the OJS data with the following API:
 
 An example view can be seen here: https://milanoup.unimi.it/ita/statistiche.html
 
-##Installation
-**Part1 (data collection)** There are no specific requirements, apart from php > 7.2. You just need the output folder structure (out/geo and out/stat), then you can launch the data collection simply by typing 
+## Installation
+**Part1 (data collection)** There are no specific requirements, apart from php > 7.2. You just need the output folder structure (out/geo and out/stat), then you can launch the data collection simply by typing  
    *php collectOjsStat.php*
-or if you want to put in crontab, you can configure crontab with
-   *30 6 1 \* \*     su - apache -c "php /usr/share/httpd/ojsStatistics/collectOjsStat.php"* which is of course an example with user apache at 6:30 each first day of month.
+or if you want to put in crontab, you can configure crontab with  
+   *30 6 1 \* \*     su - apache -c "php /usr/share/httpd/ojsStatistics/collectOjsStat.php"*   
+   which is of course an example with user apache at 6:30 each first day of month.
