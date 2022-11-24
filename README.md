@@ -11,6 +11,7 @@ The typical running of data collection will be:
 * ONESHOT - Once to get all past data, if necessary
 * PERIODICAL - Once in a month to collect the last month
 
+What is the difference with OJStat (https://www.ojstat.eu.org/)? OJStat is a really professional statistical tool which must be inside OJS installation. OjsStatics is just a tool to collect statistics from outside OJS installation.  
 
 **Part 1 (data collection)** is done with php programs. The aim of those PHP programs is to collect the relevant data. 
 The PHP programs get the OJS data with the following API:
