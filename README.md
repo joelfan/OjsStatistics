@@ -35,7 +35,7 @@ There are no specific requirements, apart from php > 7.2.
 
 ## Configuration and launching part1 (data collection)
 To configure,  
-* edit constants.php. Many of the parameters are mandatory and refer to your soecific installation
+* edit constants.php. Many of the parameters are mandatory and refer to your specific installation
 * then you need the output folder structure (out/geo and out/stat), create structure if not already done
 * then you can launch the data collection simply by typing  
 <pre>   *php collectOjsStat.php*  </pre>
