@@ -45,7 +45,7 @@ journ.addEventListener("change", async function() {
 	
 	let value = journ.value;
 	let j = journ.options[journ.selectedIndex].text;
-	
+	if (j == "All") j = "ALL"
 	barChart(j);	
 	
 	valuesPack = ojsMaps[j];console.log(valuesPack);
