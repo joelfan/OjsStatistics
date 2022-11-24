@@ -18,9 +18,12 @@ The PHP programs get the OJS data with the following API:
 
 An example view can be seen here: https://milanoup.unimi.it/ita/statistiche.html
 
+
 ## Installation
+
 **Part1 (data collection)** There are no specific requirements, apart from php > 7.2. You just need the output folder structure (out/geo and out/stat), then you can launch the data collection simply by typing  
-   *php collectOjsStat.php*
+<pre>   *php collectOjsStat.php*  </pre>
 or if you want to put in crontab, you can configure crontab with  
-   *30 6 1 \* \*     su - apache -c "php /usr/share/httpd/ojsStatistics/collectOjsStat.php"*   
-   which is of course an example with user apache at 6:30 each first day of month.
+<pre>   *30 6 1 \* \*     su - apache -c "php /usr/share/httpd/ojsStatistics/collectOjsStat.php"*   </pre>
+which is of course an example with user apache at 6:30 each first day of month.
+
