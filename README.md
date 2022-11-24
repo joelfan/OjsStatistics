@@ -7,6 +7,11 @@ It is composed of two main parts:
 1) the first part collects the data and prepares the data files. This part runs asynch, that means it is deferred periodically. We make it run, for example, once in a month.
 2) the second part visualizes the data
 
+The typical running of data collection will be:
+* ONESHOT - Once to get all past data, if necessary
+* PERIODICAL - Once in a month to collect the last month
+
+
 **Part 1 (data collection)** is done with php programs. The aim of those PHP programs is to collect the relevant data. 
 The PHP programs get the OJS data with the following API:
 * https://[ojsSite]/index.php/contexts/api/v1?apiToken=[token] that produces the list of journals. where [ojsSite] is the site where OJS is running, [token] is the apikey.
@@ -21,9 +26,24 @@ An example view can be seen here: https://milanoup.unimi.it/ita/statistiche.html
 
 ## Installation
 
-**Part1 (data collection)** There are no specific requirements, apart from php > 7.2. You just need the output folder structure (out/geo and out/stat), then you can launch the data collection simply by typing  
+**Part1 (data collection)**  
+There are no specific requirements, apart from php > 7.2. 
+
+**Part 2 (web view)** 
+* create a folder in htdocs, name it as you want
+* (after having launched part1) copy inside this folder part2 content, that is index.html and src subfolder
+
+## Configuration and launching part1 (data collection)
+To configure,  
+* edit constants.php. Many of the parameters are mandatory and refer to your soecific installation
+* then you need the output folder structure (out/geo and out/stat), create structure if not already done
+* then you can launch the data collection simply by typing  
 <pre>   *php collectOjsStat.php*  </pre>
 or if you want to put in crontab, you can configure crontab with  
 <pre>   *30 6 1 \* \*     su - apache -c "php /usr/share/httpd/ojsStatistics/collectOjsStat.php"*   </pre>
 which is of course an example with user apache at 6:30 each first day of month.
+
+
+Be careful, depending on the number of journals, the process can be quite long. It takes more than 1 hour with 50 journals. 
+If you want to collect past data, you need to be even more patient, it really takes much time. But at least it must be done only once. 
 
