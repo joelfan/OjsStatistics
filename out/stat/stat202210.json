@@ -1,0 +1,25 @@
+{
+    "202210": {
+        "All": {
+            "abstractViews": 1695,
+            "galleyViews": 2639,
+            "pdfViews": 2639,
+            "htmlViews": 0,
+            "otherViews": 0
+        },
+        "cinemaetcie": {
+            "abstractViews": 957,
+            "galleyViews": 493,
+            "pdfViews": 493,
+            "htmlViews": 0,
+            "otherViews": 0
+        },
+        "SED": {
+            "abstractViews": 738,
+            "galleyViews": 2146,
+            "pdfViews": 2146,
+            "htmlViews": 0,
+            "otherViews": 0
+        }
+    }
+}
